@@ -77,19 +77,19 @@ https://1drv.ms/f/s!ApLdDEW3ut5fec2OzK4S4RpT-SU
 
 ### 3. Generate anchors for your dataset (optional)
 
-`python gen_anchors.py -c config.json`
+`python gen_anchors.py -c config_person.json`
 
 Copy the generated anchors printed on the terminal to the ```anchors``` setting in ```config.json```.
 
 ### 4. Start the training process
 
-`python train.py -c config.json`
+`python train.py -c config_person.json`
 
 By the end of this process, the code will write the weights of the best model to file best_weights.h5 (or whatever name specified in the setting "saved_weights_name" in the config.json file). The training process stops when the loss on the validation set is not improved in 3 consecutive epoches.
 
 ### 5. Perform detection using trained weights on an image or the webcam by running
-`python predict.py -c config.json -w /path/to/best_weights.h5 -i /path/to/image/or/video`
+`python predict.py -c config_person.json -w /path/to/best_weights.h5 -i /path/to/image/or/video`
 
-`python predict.py -c config.json -w /path/to/best_weights.h5 -i webcam`
+`python predict.py -c config_person.json -w /path/to/best_weights.h5 -i webcam`
 
 It carries out detection on the image and write the image with detected bounding boxes to the same folder.
