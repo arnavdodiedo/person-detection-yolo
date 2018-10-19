@@ -92,4 +92,4 @@ By the end of this process, the code will write the weights of the best model to
 
 `python predict.py -c config_person.json -w /path/to/best_weights.h5 -i webcam`
 
-It carries out detection on the image and write the image with detected bounding boxes to the same folder.
+It carries out detection on the image and write the image with detected bounding boxes to the same folder. If webcam is chosen then detected bounding boxes are drawn in realtime.
